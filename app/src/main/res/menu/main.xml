@@ -18,8 +18,24 @@
    - limitations under the License.
    -->
 
-<resources>
-    <color name="colorPrimary">#208220</color>
-    <color name="colorPrimaryDark">#186018</color>
-    <color name="colorAccent">#186018</color>
-</resources>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_about"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/menu_about"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_tts_settings"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/menu_tts_settings"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_reinitialise_tts"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="@string/menu_reinitialize_tts"
+        app:showAsAction="ifRoom" />
+</menu>

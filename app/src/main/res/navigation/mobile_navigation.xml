@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   - TTS Util
+   -
+   - Authors: Dane Finlay <dane@danefinlay.net>
+   -
+   - Copyright (C) 2019 Dane Finlay
+   -
+   - Licensed under the Apache License, Version 2.0 (the "License");
+   - you may not use this file except in compliance with the License.
+   - You may obtain a copy of the License at
+   -
+   - http://www.apache.org/licenses/LICENSE-2.0
+   -
+   - Unless required by applicable law or agreed to in writing, software
+   - distributed under the License is distributed on an "AS IS" BASIS,
+   - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   - See the License for the specific language governing permissions and
+   - limitations under the License.
+   -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/nav_read_text">
+
+    <fragment
+        android:id="@+id/nav_read_text"
+        android:name="com.bo.ttsutil.ui.ReadTextFragment"
+        android:label="@string/read_text_fragment_label"
+        tools:layout="@layout/fragment_read_text" />
+
+    <fragment
+        android:id="@+id/nav_read_clipboard"
+        android:name="com.bo.ttsutil.ui.ReadClipboardFragment"
+        android:label="@string/read_clipboard_fragment_label"
+        tools:layout="@layout/fragment_read_clipboard" />
+
+    <fragment
+        android:id="@+id/nav_read_files"
+        android:name="com.bo.ttsutil.ui.ReadFilesFragment"
+        android:label="@string/read_files_fragment_label"
+        tools:layout="@layout/fragment_read_files" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.bo.ttsutil.ui.SettingsFragment"
+        android:label="@string/settings_fragment_label" />
+</navigation>

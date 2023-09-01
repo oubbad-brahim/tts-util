@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   - TTS Util
+   -
+   - Authors: Dane Finlay <dane@danefinlay.net>
+   -
+   - Copyright (C) 2019 Dane Finlay
+   -
+   - Licensed under the Apache License, Version 2.0 (the "License");
+   - you may not use this file except in compliance with the License.
+   - You may obtain a copy of the License at
+   -
+   - http://www.apache.org/licenses/LICENSE-2.0
+   -
+   - Unless required by applicable law or agreed to in writing, software
+   - distributed under the License is distributed on an "AS IS" BASIS,
+   - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   - See the License for the specific language governing permissions and
+   - limitations under the License.
+   -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/fragment_margin"
+    android:paddingVertical="@dimen/fragment_margin">
+
+    <TextView
+        android:id="@+id/fragment_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/read_files_fragment_desc"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/status_field_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_description">
+
+        <TextView
+            android:id="@+id/status_text_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status_text_field"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/remaining_tasks_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remaining_tasks_field"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/status_text_field" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chosen_file_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status_field_container">
+
+        <TextView
+            android:id="@+id/chosen_file_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chosen_file_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/chosen_filename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:text="@string/no_file_chosen_dec"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/chosen_file_label"
+            app:layout_constraintTop_toBottomOf="@id/chosen_file_label" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chosen_file_container">
+
+        <ImageButton
+            android:id="@+id/play_file_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/play_file_button"
+            android:src="@drawable/ic_baseline_play_circle_outline_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/save_button"
+            android:src="@drawable/ic_outline_save_24"
+            app:layout_constraintStart_toEndOf="@id/play_file_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/stop_button"
+            android:src="@drawable/ic_outline_stop_circle_24"
+            app:layout_constraintStart_toEndOf="@id/save_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/choose_file_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:contentDescription="@string/choose_file_button"
+            android:src="@drawable/ic_outline_file_open_24"
+            app:layout_constraintStart_toEndOf="@id/stop_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/choose_dir_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/choose_dir_button"
+            android:src="@drawable/ic_outline_folder_open_24"
+            app:layout_constraintStart_toEndOf="@+id/choose_file_button"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

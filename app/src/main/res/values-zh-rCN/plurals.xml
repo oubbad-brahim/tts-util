@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<!--
    - TTS Util
    -
    - Authors: Dane Finlay <dane@danefinlay.net>
    -
-   - Copyright (C) 2019 Dane Finlay
+   - Copyright (C) 2022 Dane Finlay
    -
    - Licensed under the Apache License, Version 2.0 (the "License");
    - you may not use this file except in compliance with the License.
@@ -19,7 +19,16 @@
    -->
 
 <resources>
-    <color name="colorPrimary">#208220</color>
-    <color name="colorPrimaryDark">#186018</color>
-    <color name="colorAccent">#186018</color>
+    <plurals name="files">
+        <item quantity="one">文件</item>
+        <item quantity="other">文件</item>
+    </plurals>
+    <plurals name="tasks">
+        <item quantity="one">任务</item>
+        <item quantity="other">任务</item>
+    </plurals>
+    <plurals name="characters">
+        <item quantity="one">文本</item>
+        <item quantity="other">文本</item>
+    </plurals>
 </resources>

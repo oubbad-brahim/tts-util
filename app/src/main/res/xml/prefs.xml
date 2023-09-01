@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   - TTS Util
+   -
+   - Authors: Dane Finlay <dane@danefinlay.net>
+   -
+   - Copyright (C) 2019 Dane Finlay
+   -
+   - Licensed under the Apache License, Version 2.0 (the "License");
+   - you may not use this file except in compliance with the License.
+   - You may obtain a copy of the License at
+   -
+   - http://www.apache.org/licenses/LICENSE-2.0
+   -
+   - Unless required by applicable law or agreed to in writing, software
+   - distributed under the License is distributed on an "AS IS" BASIS,
+   - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   - See the License for the specific language governing permissions and
+   - limitations under the License.
+   -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_fragment_label">
+
+    <PreferenceCategory android:title="@string/pref_tts_engine_category">
+
+        <Preference
+            android:icon="@drawable/ic_apps"
+            android:key="pref_tts_engine"
+            android:summary="@string/pref_tts_engine_summary"
+            android:title="@string/pref_tts_engine" />
+
+        <Preference
+            android:icon="@drawable/ic_language"
+            android:key="pref_tts_voice"
+            android:summary="@string/pref_tts_voice_summary"
+            android:title="@string/pref_tts_voice" />
+
+        <Preference
+            android:icon="@drawable/ic_height"
+            android:key="pref_tts_pitch"
+            android:summary="@string/pref_tts_pitch_summary"
+            android:title="@string/pref_tts_pitch" />
+
+        <Preference
+            android:icon="@drawable/ic_speed"
+            android:key="pref_tts_speech_rate"
+            android:summary="@string/pref_tts_speech_rate_summary"
+            android:title="@string/pref_tts_speech_rate" />
+
+        <Preference
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:key="pref_tts_system_settings"
+            android:summary="@string/pref_tts_system_settings_summary"
+            android:title="@string/pref_tts_system_settings" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:summary="@string/pref_silence_category_summary"
+        android:title="@string/pref_silence_category">
+
+        <ListPreference
+            android:defaultValue="200"
+            android:dialogTitle="@string/pref_silence_line_endings"
+            android:entries="@array/silence_entries"
+            android:entryValues="@array/silence_values"
+            android:key="pref_silence_line_endings"
+            android:summary="@string/pref_silence_line_endings_summary"
+            android:title="@string/pref_silence_line_endings" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/pref_silence_sentences"
+            android:entries="@array/silence_entries"
+            android:entryValues="@array/silence_values"
+            android:key="pref_silence_sentences"
+            android:summary="@string/pref_silence_sentences_summary"
+            android:title="@string/pref_silence_sentences" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/pref_silence_questions"
+            android:entries="@array/silence_entries"
+            android:entryValues="@array/silence_values"
+            android:key="pref_silence_questions"
+            android:summary="@string/pref_silence_questions_summary"
+            android:title="@string/pref_silence_questions" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/pref_silence_exclamations"
+            android:entries="@array/silence_entries"
+            android:entryValues="@array/silence_values"
+            android:key="pref_silence_exclamations"
+            android:summary="@string/pref_silence_exclamations_summary"
+            android:title="@string/pref_silence_exclamations" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:summary="@string/pref_input_category_summary"
+        android:title="@string/pref_input_category">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_playback_on_input"
+            android:summary="@string/pref_playback_on_input_summary"
+            android:title="@string/pref_playback_on_input" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_scale_silence_to_rate"
+            android:summary="@string/pref_scale_silence_to_rate_summary"
+            android:title="@string/pref_scale_silence_to_rate" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:summary="@string/pref_filter_category_summary"
+        android:title="@string/pref_filter_category">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_filter_hash"
+            android:summary="@string/pref_filter_hash_summary"
+            android:title="@string/pref_filter_hash" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_filter_web_links"
+            android:summary="@string/pref_filter_web_links_summary"
+            android:title="@string/pref_filter_web_links" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_filter_mailto_links"
+            android:summary="@string/pref_filter_mailto_links_summary"
+            android:title="@string/pref_filter_mailto_links" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:summary="@string/pref_misc_category_summary"
+        android:title="@string/pref_misc_category">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_misc_next_task_messages"
+            android:summary="@string/pref_misc_next_task_messages_summary"
+            android:title="@string/pref_misc_next_task_messages" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

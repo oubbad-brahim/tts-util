@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   - TTS Util
+   -
+   - Authors: Dane Finlay <dane@danefinlay.net>
+   -
+   - Copyright (C) 2019 Dane Finlay
+   -
+   - Licensed under the Apache License, Version 2.0 (the "License");
+   - you may not use this file except in compliance with the License.
+   - You may obtain a copy of the License at
+   -
+   - http://www.apache.org/licenses/LICENSE-2.0
+   -
+   - Unless required by applicable law or agreed to in writing, software
+   - distributed under the License is distributed on an "AS IS" BASIS,
+   - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   - See the License for the specific language governing permissions and
+   - limitations under the License.
+   -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AboutActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fragment_margin"
+        android:paddingVertical="@dimen/fragment_margin">
+
+        <TextView
+            android:id="@+id/about_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_version"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/about_copyright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_copyright"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_version" />
+
+        <TextView
+            android:id="@+id/about_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/about_app"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_copyright" />
+
+        <TextView
+            android:id="@+id/about_acknowledgements_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/about_acknowledgements_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_app" />
+
+        <TextView
+            android:id="@+id/about_acknowledgements_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_acknowledgements_msg"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_acknowledgements_title" />
+
+        <TextView
+            android:id="@+id/about_ack_material_design_icons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/about_ack_material_design_icons"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_acknowledgements_msg" />
+
+        <TextView
+            android:id="@+id/about_ack_kotlin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/about_ack_kotlin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_ack_material_design_icons" />
+
+        <TextView
+            android:id="@+id/about_ack_anko"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/about_ack_anko"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_ack_kotlin" />
+
+        <TextView
+            android:id="@+id/about_ack_free_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/about_ack_free_otp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_ack_anko" />
+
+        <TextView
+            android:id="@+id/about_translations_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/about_translations_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_ack_free_otp" />
+
+        <TextView
+            android:id="@+id/about_translations_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_translations_msg"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_translations_title" />
+
+        <TextView
+            android:id="@+id/about_translation_chinese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/about_translation_chinese"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_translations_msg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
